@@ -85,7 +85,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: ;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -129,6 +129,7 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  border: 2px solid black;
 }
 html,
 body {
@@ -137,9 +138,84 @@ body {
 }
 body nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 body nav a {
   text-decoration: none;
   background-color: pink;
+  margin-right: 5%;
+}
+body nav a:last-child {
+  margin-right: 0;
+}
+body .top-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 10% 5%;
+}
+body .top-section .top-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .top-section .bottom-top {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .top-section h3 {
+  font-size: 70px;
+  margin: 10%;
+}
+body .top-section button {
+  width: 50%;
+  font-size: 30px;
+  margin-bottom: 5%;
+}
+body .middle-section {
+  margin: 10% 0;
+  display: flex;
+  align-items: center;
+}
+body .middle-section .left-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body .middle-section .right-middle {
+  width: 40%;
+}
+body .middle-section li {
+  padding: 2% 0;
+  margin-left: 5%;
+}
+body .bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bottom-section table {
+  width: 80%;
+  text-align: center;
+}
+body .bottom-section thead {
+  background-color: lightblue;
+  font-size: 25px;
+}
+body .bottom-section tbody {
+  font-size: 20px;
+}
+body .bottom-section td {
+  padding: 1% 0;
+}
+h1,
+h2 {
+  font-size: 70px;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
 }

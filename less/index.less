@@ -19,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	border: ;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -54,24 +54,107 @@ table {
 	border: 2px solid black;
 }
 
+@topFont: 70px;
+
 html, body {
 	height: 100%;
 	margin: 1% 2%;
 }
 
+
+
 body {
 	
 	nav {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 
 		a {
 			text-decoration: none;
 			background-color: pink;
+			margin-right: 5%;
+		}
+
+		a:last-child {
+			margin-right: 0;
 		}
 	}
 
-	di
+	.top-section {
+		display: flex;
+		
+		justify-content: space-between;
+		padding: 10% 5%;
+		.top-top {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.bottom-top {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		h3 {
+			font-size: @topFont;
+			margin: 10%;
+		}
+		button {
+			width: 50%;
+			font-size: 30px;
+			margin-bottom: 5%;
+		}
+	}
+
+	.middle-section {
+		margin: 10% 0;
+		display: flex;
+		align-items: center;
+		.left-middle {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		.right-middle {
+			width: 40%;
+		}
+
+		li {
+			padding: 2% 0;
+			margin-left: 5%;
+		}
+	}
+
+	.bottom-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		table {
+			width: 80%;
+			text-align: center;
+		}
+		thead {
+			background-color: lightblue;
+			font-size: 25px;
+		}
+		tbody{
+			font-size: 20px;
+		}
+		td {
+			padding: 1% 0;
+		}
+	}
 
 }
 
+h1, h2 {
+	font-size: @topFont;
+}
+
+h3 {
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
