@@ -55,7 +55,7 @@ table {
 // ====variables====
 @topFont: 70px;
 @div-bg-color: lightblue;
-
+@mobile-font: 50px;
 // ====mix-ins====
 .flex-column {
 	display: flex;
@@ -66,6 +66,10 @@ table {
 .p-font {
 	line-height: 1.8;
 	letter-spacing: 2px;
+}
+
+.mobile-font {
+	font-size: @mobile-font;
 }
 
 html, body {
@@ -116,6 +120,21 @@ body {
 		p {
 			.p-font();
 		}
+
+		@media(max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			text-align: center;
+			margin: 15% 0;
+			button {
+				width: 100%;
+			}
+			h1, h2 {
+				.mobile-font();
+			}
+		}
 	}
 
 	.middle-section {
@@ -127,7 +146,10 @@ body {
 			text-align: center;
 		}
 		.right-middle {
-			width: 40%;
+			width: 70%;
+			text-align: center;
+			border: 2px solid black;
+			padding: 3%;
 		}
 
 		li {
@@ -142,6 +164,11 @@ body {
 		@media(max-width: 500px) {
 			display: flex;
 			flex-direction: column;
+			width: 100%;
+			text-align: center;
+			h1, h2 {
+				.mobile-font();
+			}
 		}
 	}
 
@@ -162,10 +189,28 @@ body {
 		td {
 			padding: 1% 0;
 		}
+
+		@media(max-width: 500px) {
+			h1, h2 {
+				.mobile-font();
+			}
+			table {
+				display: nones;
+			}
+		}
 	}
 
 	.contact {
 		.flex-column();
+		margin-top: 5%;
+		address {
+			margin: 5%;
+		}
+		@media(max-width: 500px) {
+			h1, h2 {
+				.mobile-font();
+			}
+		}
 	}
 
 	footer {

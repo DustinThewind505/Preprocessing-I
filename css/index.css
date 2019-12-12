@@ -85,7 +85,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: ;
+  border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -129,7 +129,18 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  border: 2px solid black;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-font {
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+.mobile-font {
+  font-size: 50px;
 }
 html,
 body {
@@ -173,6 +184,27 @@ body .top-section button {
   font-size: 30px;
   margin-bottom: 5%;
 }
+body .top-section p {
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+@media (max-width: 500px) {
+  body .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 15% 0;
+  }
+  body .top-section button {
+    width: 100%;
+  }
+  body .top-section h1,
+  body .top-section h2 {
+    font-size: 50px;
+  }
+}
 body .middle-section {
   margin: 10% 0;
   display: flex;
@@ -185,13 +217,34 @@ body .middle-section .left-middle {
   text-align: center;
 }
 body .middle-section .right-middle {
-  width: 40%;
+  width: 70%;
+  text-align: center;
+  border: 2px solid black;
+  padding: 3%;
 }
 body .middle-section li {
   padding: 2% 0;
   margin-left: 5%;
 }
+body .middle-section p {
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+@media (max-width: 500px) {
+  body .middle-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  body .middle-section h1,
+  body .middle-section h2 {
+    font-size: 50px;
+  }
+}
 body .bottom-section {
+  line-height: 1.8;
+  letter-spacing: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,13 +263,35 @@ body .bottom-section tbody {
 body .bottom-section td {
   padding: 1% 0;
 }
+@media (max-width: 500px) {
+  body .bottom-section h1,
+  body .bottom-section h2 {
+    font-size: 50px;
+  }
+  body .bottom-section table {
+    display: nones;
+  }
+}
 body .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
+}
+body .contact address {
+  margin: 5%;
+}
+@media (max-width: 500px) {
+  body .contact h1,
+  body .contact h2 {
+    font-size: 50px;
+  }
 }
 body footer {
   text-align: center;
+}
+body footer small {
+  margin: 3%;
 }
 h1,
 h2 {
