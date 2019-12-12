@@ -51,15 +51,21 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
-	border: 2px solid black;
 }
-
+// ====variables====
 @topFont: 70px;
+@div-bg-color: lightblue;
 
+// ====mix-ins====
 .flex-column {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.p-font {
+	line-height: 1.8;
+	letter-spacing: 2px;
 }
 
 html, body {
@@ -88,15 +94,14 @@ body {
 
 	.top-section {
 		display: flex;
-		
 		justify-content: space-between;
 		padding: 10% 5%;
 		.top-top {
-			.flex-column()
+			.flex-column();
 		}
 		.bottom-top {
 			width: 50%;
-			.flex-column()
+			.flex-column();
 		}
 		h3 {
 			font-size: @topFont;
@@ -107,6 +112,10 @@ body {
 			font-size: 30px;
 			margin-bottom: 5%;
 		}
+
+		p {
+			.p-font();
+		}
 	}
 
 	.middle-section {
@@ -114,7 +123,7 @@ body {
 		display: flex;
 		align-items: center;
 		.left-middle {
-			.flex-column()
+			.flex-column();
 			text-align: center;
 		}
 		.right-middle {
@@ -125,10 +134,20 @@ body {
 			padding: 2% 0;
 			margin-left: 5%;
 		}
+
+		p {
+			.p-font()
+		}
+
+		@media(max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	.bottom-section {
-		.flex-column()
+		.p-font();
+		.flex-column();
 		table {
 			width: 80%;
 			text-align: center;
@@ -146,7 +165,7 @@ body {
 	}
 
 	.contact {
-		.flex-column()
+		.flex-column();
 	}
 
 	footer {
