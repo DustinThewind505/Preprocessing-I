@@ -210,6 +210,14 @@ body .bottom-section tbody {
 body .bottom-section td {
   padding: 1% 0;
 }
+body .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body footer {
+  text-align: center;
+}
 h1,
 h2 {
   font-size: 70px;

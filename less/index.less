@@ -19,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: ;
+	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -56,6 +56,12 @@ table {
 
 @topFont: 70px;
 
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 html, body {
 	height: 100%;
 	margin: 1% 2%;
@@ -86,15 +92,11 @@ body {
 		justify-content: space-between;
 		padding: 10% 5%;
 		.top-top {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			.flex-column()
 		}
 		.bottom-top {
 			width: 50%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			.flex-column()
 		}
 		h3 {
 			font-size: @topFont;
@@ -112,9 +114,7 @@ body {
 		display: flex;
 		align-items: center;
 		.left-middle {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			.flex-column()
 			text-align: center;
 		}
 		.right-middle {
@@ -128,9 +128,7 @@ body {
 	}
 
 	.bottom-section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		.flex-column()
 		table {
 			width: 80%;
 			text-align: center;
@@ -144,6 +142,17 @@ body {
 		}
 		td {
 			padding: 1% 0;
+		}
+	}
+
+	.contact {
+		.flex-column()
+	}
+
+	footer {
+		text-align: center;
+		small {
+			margin: 3%;
 		}
 	}
 
