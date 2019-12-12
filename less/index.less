@@ -80,6 +80,16 @@ html, body {
 
 
 body {
+
+	h1, h2 {
+		font-size: @topFont;
+	}
+	
+	h3 {
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+	}
 	
 	nav {
 		display: flex;
@@ -89,6 +99,7 @@ body {
 			text-decoration: none;
 			background-color: pink;
 			margin-right: 5%;
+			font-size: 20px;
 		}
 
 		a:last-child {
@@ -99,7 +110,7 @@ body {
 	.top-section {
 		display: flex;
 		justify-content: space-between;
-		padding: 10% 5%;
+		padding: 4% 5% 0;
 		.top-top {
 			.flex-column();
 		}
@@ -133,6 +144,9 @@ body {
 			}
 			h1, h2 {
 				.mobile-font();
+			}
+			.top-top {
+				width: 100%;
 			}
 		}
 	}
@@ -197,6 +211,12 @@ body {
 			table {
 				display: nones;
 			}
+			thead {
+				background-color: lightblue;
+				font-size: 15px;
+			}
+			tbody{
+				font-size: 10px;
 		}
 	}
 
@@ -218,16 +238,12 @@ body {
 		small {
 			margin: 3%;
 		}
+		@media(max-width: 500px) {
+			small {
+				padding-bottom: 5%;
+			}
 	}
 
 }
 
-h1, h2 {
-	font-size: @topFont;
-}
-
-h3 {
-	font-size: 20px;
-	text-align: center;
-	font-weight: bold;
-}
+	}

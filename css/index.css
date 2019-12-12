@@ -155,6 +155,7 @@ body nav a {
   text-decoration: none;
   background-color: pink;
   margin-right: 5%;
+  font-size: 20px;
 }
 body nav a:last-child {
   margin-right: 0;
@@ -162,7 +163,7 @@ body nav a:last-child {
 body .top-section {
   display: flex;
   justify-content: space-between;
-  padding: 10% 5%;
+  padding: 4% 5% 0;
 }
 body .top-section .top-top {
   display: flex;
