@@ -1,1 +1,305 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-font {
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+.mobile-font {
+  font-size: 50px;
+}
+html,
+body {
+  height: 100%;
+  margin: 1% 2%;
+}
+body nav {
+  display: flex;
+  justify-content: flex-end;
+}
+body nav a {
+  text-decoration: none;
+  background-color: pink;
+  margin-right: 5%;
+  font-size: 20px;
+}
+body nav a:last-child {
+  margin-right: 0;
+}
+body .top-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4% 5% 0;
+}
+body .top-section .top-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .top-section .bottom-top {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .top-section h3 {
+  font-size: 70px;
+  margin: 10%;
+}
+body .top-section button {
+  width: 50%;
+  font-size: 30px;
+  margin-bottom: 5%;
+}
+body .top-section p {
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+@media (max-width: 500px) {
+  body .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 15% 0;
+  }
+  body .top-section button {
+    width: 100%;
+  }
+  body .top-section h1,
+  body .top-section h2 {
+    font-size: 50px;
+  }
+}
+body .middle-section {
+  margin: 10% 0;
+  display: flex;
+  align-items: center;
+}
+body .middle-section .left-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body .middle-section .right-middle {
+  width: 70%;
+  text-align: center;
+  border: 2px solid black;
+  padding: 3%;
+}
+body .middle-section li {
+  padding: 2% 0;
+  margin-left: 5%;
+}
+body .middle-section p {
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+@media (max-width: 500px) {
+  body .middle-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  body .middle-section h1,
+  body .middle-section h2 {
+    font-size: 50px;
+  }
+}
+body .bottom-section {
+  line-height: 1.8;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bottom-section table {
+  width: 80%;
+  text-align: center;
+}
+body .bottom-section thead {
+  background-color: lightblue;
+  font-size: 25px;
+}
+body .bottom-section tbody {
+  font-size: 20px;
+}
+body .bottom-section td {
+  padding: 1% 0;
+}
+@media (max-width: 500px) {
+  body .bottom-section h1,
+  body .bottom-section h2 {
+    font-size: 50px;
+  }
+  body .bottom-section table {
+    display: nones;
+  }
+}
+body .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+body .contact address {
+  margin: 5%;
+}
+@media (max-width: 500px) {
+  body .contact h1,
+  body .contact h2 {
+    font-size: 50px;
+  }
+}
+body footer {
+  text-align: center;
+}
+body footer small {
+  margin: 3%;
+}
+h1,
+h2 {
+  font-size: 70px;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
